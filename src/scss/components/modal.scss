@@ -14,47 +14,48 @@
 
   &--active {
     display: grid;
-    animation: fade .3s;
+    animation: fade 0.3s;
   }
 
   &__body {
     max-width: 1360px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 24px;
     padding: 48px clamp(25px, 7vw, 64px) 64px;
   }
 
   &__close {
+    padding: 16px;
+    background-color: #ffffff;
     display: block;
     margin-left: auto;
     position: relative;
 
-    @media(max-width: 322px) {
+    @media (max-width: 322px) {
       position: relative;
       top: -26px;
     }
 
     span {
-
       &::before,
       &::after {
-        content: "";
+        content: '';
         background-color: $blackShim;
         position: absolute;
         width: 2px;
         height: 16px;
-        left: 0;
+        // left: 0;
         transition: all 0.3s;
       }
 
       &::before {
         transform: rotate(45deg);
-        top: 0;
+        top: 8px;
       }
 
       &::after {
         transform: rotate(-45deg);
-        bottom: -16px;
+        bottom: 8px;
       }
     }
   }
@@ -82,5 +83,6 @@
     }
   }
 
-  &__text {}
+  &__text {
+  }
 }

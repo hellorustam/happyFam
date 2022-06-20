@@ -1538,11 +1538,13 @@ body.locked {
 }
 .modal__body {
   max-width: 1360px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 24px;
   padding: 48px clamp(25px, 7vw, 64px) 64px;
 }
 .modal__close {
+  padding: 16px;
+  background-color: #ffffff;
   display: block;
   margin-left: auto;
   position: relative;
@@ -1559,16 +1561,15 @@ body.locked {
   position: absolute;
   width: 2px;
   height: 16px;
-  left: 0;
   transition: all 0.3s;
 }
 .modal__close span::before {
   transform: rotate(45deg);
-  top: 0;
+  top: 8px;
 }
 .modal__close span::after {
   transform: rotate(-45deg);
-  bottom: -16px;
+  bottom: 8px;
 }
 .modal__img {
   width: 240px;
