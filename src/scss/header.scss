@@ -1,0 +1,135 @@
+.header {
+  background-color: #FFFFFF;
+  z-index: 3;
+
+  &__fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    animation: fade .5s;
+  }
+
+  &__logo {
+    z-index: 10;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      box-shadow: 0px 6px 20px rgb(0 0 0 / 15%);
+
+      @media(min-width: $min-breakpoint1200) {
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.menu {
+  @media (max-width: $breakpoint1200) {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: -100%;
+    left: 0;
+    transition: all 0.3s;
+    z-index: -1;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    &--active {
+      top: 80px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    @media (max-width: $breakpoint1200) {
+      flex-direction: column;
+      height: 100%;
+      align-items: flex-start;
+    }
+  }
+
+  &__item+&__item {
+    @media (min-width: $min-breakpoint1200) {
+      margin-left: 21px;
+    }
+
+    @media (max-width: $breakpoint1200) {
+      margin-top: 24px;
+    }
+  }
+
+  &__link {
+    color: $blackShim;
+    transition: all 0.3s;
+
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  &__started {
+
+    @media(max-width: $breakpoint1200) {
+      margin-top: 24px;
+    }
+
+    @media(min-width: $min-breakpoint1200) {
+      margin-left: 24px;
+    }
+  }
+
+  .menu__btn {
+    display: inline-block;
+    color: #546223;
+    padding: 8px 24px 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #546223;
+    transition: background-color .3s;
+
+    span {
+      margin-right: 16px;
+    }
+
+    svg {
+      vertical-align: baseline;
+
+      path {
+        transition: all .3s;
+      }
+    }
+
+    @media(any-hover: hover) {
+      &:hover {
+        background-color: $mainGreen;
+        color: $white;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

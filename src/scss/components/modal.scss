@@ -1,0 +1,86 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: auto;
+
+  &--active {
+    display: grid;
+    animation: fade .3s;
+  }
+
+  &__body {
+    max-width: 1360px;
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    padding: 48px clamp(25px, 7vw, 64px) 64px;
+  }
+
+  &__close {
+    display: block;
+    margin-left: auto;
+    position: relative;
+
+    @media(max-width: 322px) {
+      position: relative;
+      top: -26px;
+    }
+
+    span {
+
+      &::before,
+      &::after {
+        content: "";
+        background-color: $blackShim;
+        position: absolute;
+        width: 2px;
+        height: 16px;
+        left: 0;
+        transition: all 0.3s;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        bottom: -16px;
+      }
+    }
+  }
+
+  &__img {
+    width: 240px;
+    height: 280px;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    text-align: left;
+  }
+
+  &__title {
+    max-width: 300px;
+    @include Comfortaa();
+    font-weight: 700;
+    font-size: 22px;
+    line-height: math.div(24.53, 22);
+    color: #333333;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {}
+}

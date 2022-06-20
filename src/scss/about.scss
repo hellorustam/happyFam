@@ -1,0 +1,254 @@
+.about {
+  .welcome {
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 111px;
+
+    &::before {
+      content: '';
+      background-color: $mainGreen;
+      height: 480px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+
+      @media(max-width: $breakpoint992) {
+        height: 320px;
+      }
+
+      @media(max-width: 475px) {
+        height: 140px;
+      }
+    }
+
+    &__video {
+      max-width: 800px;
+      height: 450px;
+      position: relative;
+
+      * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 24px;
+      }
+
+      margin: 0 auto 80px;
+
+      @media(max-width: $breakpoint992) {
+        max-width: 688px;
+        height: 388px;
+        margin-bottom: 64px;
+      }
+
+      @media(max-width: 475px) {
+        max-width: 280px;
+        height: 157px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &__text {
+      p+p {
+        margin-top: 23px;
+      }
+    }
+  }
+
+  .block {
+
+    @media(max-width: $breakpoint1200) {
+      margin-bottom: 64px;
+    }
+
+    @media(min-width: $min-breakpoint1200) {
+      margin-bottom: 120px;
+    }
+
+    &__item:not(:last-child) {
+
+      @media(max-width: $breakpoint1200) {
+        margin-bottom: 64px;
+      }
+
+      @media(min-width: $min-breakpoint1200) {
+        margin-bottom: 147px;
+      }
+    }
+
+    &__container {
+      max-width: 1160px;
+      padding: 0 15px;
+      margin: 0 auto;
+      display: flex;
+
+      @media(max-width: $breakpoint1200) {
+        flex-direction: column-reverse;
+      }
+
+      @media(min-width: $min-breakpoint1200) {
+        align-items: center;
+      }
+
+      &--big {
+        max-width: 1188px;
+
+        @media(max-width: 1280px) {
+          flex-direction: column;
+        }
+
+        @media(min-width: 1280px) {
+          position: relative;
+        }
+      }
+    }
+
+    .course {
+      width: 100%;
+
+      @media(min-width: $min-breakpoint1200) {
+        min-width: 440px;
+        min-height: 359px;
+      }
+    }
+
+    .block__desc--big {
+      max-width: initial;
+    }
+
+    &__text {
+      line-height: math.div(21.6, 18);
+
+      span {
+        font-weight: 700;
+        color: #000000;
+      }
+
+      @media(max-width: $breakpoint1200) {
+        margin-top: 40px;
+      }
+
+      &:first-child {
+        @media(min-width: $min-breakpoint1200) {
+          max-width: 440px;
+          margin-right: 139px;
+        }
+      }
+
+      &:last-child {
+        @media(min-width: 1280px) {
+          max-width: 555px;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &__wrapper {
+      box-sizing: border-box;
+    }
+
+    &__slider {
+      margin: initial;
+
+      @media(min-width: 1280px) {
+        max-width: 464px;
+        padding: 6px 0 0 14px;
+
+        .course__desc {
+          max-width: initial;
+        }
+      }
+
+      @media(max-width: 1280px) {
+        max-width: 1205px;
+        padding: 15px 5px 15px 5px;
+      }
+    }
+
+    &__btn {
+
+      &--prev,
+      &--next {
+        color: $orange;
+
+        @media(max-width: 1280px) {
+          display: none;
+        }
+      }
+
+      &--next {
+        left: 513px;
+        top: 40%;
+      }
+
+      &--prev {
+        left: -37px;
+        top: 40%;
+      }
+    }
+
+    &__pagination {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 18px;
+      cursor: pointer;
+
+      @media(min-width: 1280px) {}
+
+      .swiper-pagination-bullet {
+        background: #EEEEEE;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .swiper-pagination-bullet+.swiper-pagination-bullet {
+        margin-left: 11px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #333333;
+      }
+    }
+  }
+
+  .good {
+    margin-bottom: 193px;
+    text-align: center;
+
+    &__title {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      @media(max-width: $breakpoint576) {
+        font-size: 24px;
+      }
+    }
+
+    &__desc {
+      @include Comfortaa();
+      text-align: center;
+      font-size: 24px;
+      color: $uniBlue;
+
+      &:not(:last-child) {
+        margin-bottom: 120px;
+      }
+
+      @media(max-width: $breakpoint576) {
+        font-size: 18px;
+      }
+    }
+  }
+}

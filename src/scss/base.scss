@@ -1,0 +1,20 @@
+body {
+  @include Lato();
+  font-weight: 400;
+  font-size: 18px;
+  color: $blackShim;
+  line-height: 1;
+  height: 100%;
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

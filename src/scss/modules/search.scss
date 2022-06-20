@@ -1,0 +1,49 @@
+.search {
+  display: flex;
+
+  &__input {
+    border: 1px solid #d9d9d9;
+    border-radius: 3px 0px 0px 3px;
+    padding: 10px 11px;
+    display: flex;
+    align-items: center;
+
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: rem(14);
+      margin-left: 20px;
+      color: #222;
+
+      &::placeholder {
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: rem(14);
+        margin-left: 20px;
+        color: #e0e0e0;
+      }
+    }
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: rem(14);
+    padding: emP(10, 14) emP(44, 14);
+    color: #e0e0e0;
+    background-color: #b8bdc9;
+    border-radius: 0px 3px 3px 0px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+}

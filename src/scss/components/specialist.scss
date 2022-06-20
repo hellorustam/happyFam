@@ -1,0 +1,45 @@
+.specialist {
+  margin: 109px 0 173px;
+
+  &__container {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+
+    &::after {
+      content: url(../img/decore-1.svg);
+      position: absolute;
+      width: 164px;
+      height: 308px;
+      bottom: -217px;
+      right: -139px;
+
+      @media(max-width: $breakpoint1400) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    margin: 54px 0 40px;
+    text-align: center;
+    
+    @media(max-width: $breakpoint576) {
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    max-width: fit-content;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 auto;
+
+    svg {
+      margin: 3px 0 0 -5px;
+    }
+  }
+}

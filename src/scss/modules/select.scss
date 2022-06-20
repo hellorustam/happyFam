@@ -1,0 +1,16 @@
+.select {
+  position: relative;
+
+  select {
+    background: none;
+    border: none;
+    appearance: none;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+  }
+}

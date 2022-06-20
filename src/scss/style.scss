@@ -1,0 +1,227 @@
+@use 'sass:math';
+
+@import "vars";
+
+/*
+-------Reset----------
+*/
+
+@import "reset";
+
+/*
+----------Swipper-------------
+*/
+
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
+@import "../../node_modules/swiper/modules/effect-creative/effect-creative";
+
+/*
+----------Base-------------
+*/
+
+@import "base";
+
+/*
+----------Animation-------------
+*/
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*
+----------Global-------------
+*/
+
+@import "global";
+
+/*
+---------Header-----------
+*/
+
+@import "header";
+
+// Burger
+
+@import "modules/burger";
+
+/*
+---------Main-----------
+*/
+
+.main {
+  flex: 1 1 auto;
+}
+
+/*
+---------Components-----------
+*/
+
+/*
+---------Intro-----------
+*/
+
+@import "components/intro";
+
+/*
+---------Benefits-----------
+*/
+
+@import "components/benefits";
+
+/*
+---------Benefits-----------
+*/
+
+@import "components/welcome";
+
+/*
+---------lectures-----------
+*/
+
+@import "components/lectures";
+
+/*
+---------Specialist-----------
+*/
+
+@import "components/specialist";
+/*
+---------Stock-----------
+*/
+
+@import "components/stock";
+
+/*
+---------Courses-----------
+*/
+
+@import "components/courses";
+
+/*
+---------Contact-----------
+*/
+
+@import "components/contact";
+
+/*
+---------Modal-----------
+*/
+
+@import "components/modal";
+
+/*
+---------Pages-----------
+*/
+
+/*
+---------Home-----------
+*/
+
+.home {
+  .intro {
+    @media(max-width: $breakpoint1400) {
+      position: relative;
+    }
+
+    @media(min-width: $min-breakpoint1400) {
+      height: 480px;
+    }
+
+    &__container {
+      display: flex;
+
+      @media(min-width: $min-breakpoint1400) {
+        position: relative;
+      }
+
+      &::after {
+        content: url(../img/home/person.svg);
+        width: 151px;
+        height: 174px;
+        position: absolute;
+        right: 28px;
+        top: 213px;
+        z-index: 2;
+
+        @media(max-width: $breakpoint1400) {
+          display: none;
+        }
+      }
+
+      @media(max-width: $breakpoint576) {
+        padding: 0;
+        flex-direction: column;
+      }
+
+      @media(min-width: $min-breakpoint1400) {
+        padding-top: 72px;
+      }
+    }
+  }
+
+  .benefits {
+    margin: 193px 0 118px;
+
+    @media(max-width: $breakpoint1400) {
+      margin-top: 410px;
+    }
+
+    @media(max-width: $breakpoint576) {
+      padding-top: 45px;
+      margin-top: 0;
+    }
+  }
+
+  .welcome {
+    margin-bottom: 120px;
+  }
+
+  .stock {
+    margin-bottom: 122px;
+  }
+
+  .courses {
+    margin-bottom: 84px;
+  }
+
+  .contact {
+    margin-bottom: 195px;
+  }
+
+  .course__desc {
+    @media(max-width: $breakpoint576) {
+      width: 302px;
+    }
+
+    @media(max-width: 390px) {
+      width: 232px;
+    }
+  }
+}
+
+// About
+
+@import "about";
+
+// Out
+
+@import "our";
+
+// products
+
+@import "products";
+
+/*
+---------Footer-----------
+*/
+
+@import "footer";
