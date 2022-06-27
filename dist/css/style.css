@@ -1275,10 +1275,10 @@ body.locked {
 .courses__block {
   width: 100%;
   min-height: 112px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
   border-radius: 24px;
-  margin-bottom: 40px;
+  margin: 40px 0;
   display: flex;
   padding: 24px;
 }
@@ -1325,7 +1325,7 @@ body.locked {
   }
 }
 .courses__pagination .swiper-pagination-bullet {
-  background: #EEEEEE;
+  background: #eeeeee;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -1338,7 +1338,7 @@ body.locked {
 }
 
 .course {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
   border-radius: 24px;
   padding: 24px;
@@ -1417,6 +1417,13 @@ body.locked {
   font-size: 24px;
   line-height: 1.115;
   color: #333333;
+}
+.courses-block__desc2 {
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  line-height: 1.115;
+  color: rgb(157, 157, 157);
+  margin-top: 8px;
 }
 
 /*
@@ -2157,7 +2164,7 @@ body.locked {
 .products__title {
   font-family: "Comfortaa", cursive;
   font-size: 700px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 @media (max-width: 575.98px) {
@@ -2180,7 +2187,7 @@ body.locked {
   display: none;
 }
 .products .courses__block {
-  margin-bottom: 66px;
+  margin: 40px 0;
 }
 .products .courses__row {
   display: grid;
@@ -2205,7 +2212,7 @@ body.locked {
 }
 
 .blog-info {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
   border-radius: 24px;
   padding: 24px;
@@ -2215,7 +2222,7 @@ body.locked {
   font-family: "Comfortaa", cursive;
   font-size: 24px;
   line-height: 1.125;
-  color: #FC9700;
+  color: #fc9700;
 }
 .blog-info__title:not(:last-child) {
   margin-bottom: 24px;
