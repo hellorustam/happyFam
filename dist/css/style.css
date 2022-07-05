@@ -1388,12 +1388,31 @@ body.locked {
   margin-bottom: 16px;
 }
 .course__btn {
-  padding: 12px 9px 1px 16px;
+  padding: 9px 9px 1px 16px;
   font-size: 18px;
 }
 .course__btn svg {
   margin: 1px 0 0 -8px;
   transform: translate(-3px, -4px);
+}
+@media (max-width: 767.98px) {
+  .course__btn__mobile {
+    display: none;
+  }
+}
+.course__btn__desktop {
+  padding: 12px 9px 6px 16px;
+  font-size: 18px;
+  margin-top: 16px;
+}
+.course__btn__desktop svg {
+  margin: 1px 0 0 -8px;
+  transform: translate(-3px, -4px);
+}
+@media (min-width: 768px) {
+  .course__btn__desktop {
+    display: none;
+  }
 }
 
 .courses-block__img {
