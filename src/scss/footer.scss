@@ -3,12 +3,12 @@
   padding: 40px 0;
   position: relative;
 
-    &::before {
+  &::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 40px;
-    background: #FC9700;
+    background: #fc9700;
     opacity: 0.3;
     top: -41px;
     left: 0;
@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     height: 40px;
-    background: #FC9700;
+    background: #fc9700;
     opacity: 0.1;
     top: -80px;
     left: 0;
@@ -29,12 +29,12 @@
     display: flex;
     align-items: center;
 
-    @media(max-width: $breakpoint768) {
+    @media (max-width: $breakpoint768) {
       flex-direction: column;
       justify-content: center;
     }
 
-    @media(min-width: $min-breakpoint768) {
+    @media (min-width: $min-breakpoint768) {
       justify-content: space-between;
     }
   }
@@ -42,21 +42,22 @@
   &__col:first-child {
     display: flex;
 
-    @media(max-width: $breakpoint768) {
+    @media (max-width: $breakpoint768) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
 
-  &__logo {}
+  // &__logo {
+  // }
 
   &__content {
-    @media(max-width: $breakpoint768) {
+    @media (max-width: $breakpoint768) {
       margin: 24px 0 40px;
     }
 
-    @media(min-width: $min-breakpoint768) {
+    @media (min-width: $min-breakpoint768) {
       margin-left: 24px;
     }
   }
@@ -65,7 +66,7 @@
     display: flex;
     align-items: center;
 
-    @media(max-width: $breakpoint768) {
+    @media (max-width: $breakpoint768) {
       flex-direction: column;
     }
   }
@@ -76,13 +77,12 @@
     text-decoration: underline;
     text-decoration-style: #fff;
 
-    &+& {
-
-      @media(max-width: $breakpoint768) {
+    & + & {
+      @media (max-width: $breakpoint768) {
         margin-top: 8px;
       }
 
-      @media(min-width: $min-breakpoint768) {
+      @media (min-width: $min-breakpoint768) {
         margin-left: 16px;
       }
     }
@@ -108,22 +108,63 @@
   list-style-type: none;
 
   &__item {
-    &+& {
+    & + & {
       margin-left: 40px;
     }
   }
 
   &__link {
     path {
-      transition: all .3s;
+      transition: all 0.3s;
     }
 
-    @media(any-hover: hover) {
+    @media (any-hover: hover) {
       &:hover {
         path {
           fill: $orange;
         }
       }
     }
+  }
+}
+
+/* стрелочка вверх */
+.scroll_top {
+  position: fixed;
+  bottom: 94px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #ffaa00;
+  z-index: 1000;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 7px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  &.active {
+    bottom: 20px;
   }
 }

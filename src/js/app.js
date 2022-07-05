@@ -1,82 +1,97 @@
-import isWebp from "./modules/webp.js"
-import burgerFunc from './modules/burger.js'
-import fixedMenuFunc from './modules/fixedMenu.js'
+import isWebp from './modules/webp.js';
+import burgerFunc from './modules/burger.js';
+import fixedMenuFunc from './modules/fixedMenu.js';
 
-isWebp()
+isWebp();
 
-burgerFunc()
+burgerFunc();
 
-fixedMenuFunc()
+fixedMenuFunc();
 
-if (document.querySelector(".welcome-text__hide")) {
+if (document.querySelector('.welcome-text__hide')) {
   function hideText() {
-    const text = document.querySelectorAll(".welcome-text__hide")
-    const hide = document.querySelector(".welcome__hide")
+    const text = document.querySelectorAll('.welcome-text__hide');
+    const hide = document.querySelector('.welcome__hide');
 
-    hide.addEventListener("click", () => {
-      text.forEach(elem => {
-        if (!elem.classList.contains("welcome-text__hide--hidden")) {
-          elem.classList.add("welcome-text__hide--hidden");
-          hide.textContent = "Скрыть"
-
+    hide.addEventListener('click', () => {
+      text.forEach((elem) => {
+        if (!elem.classList.contains('welcome-text__hide--hidden')) {
+          elem.classList.add('welcome-text__hide--hidden');
+          hide.textContent = 'Скрыть';
         } else {
           elem.classList.remove('welcome-text__hide--hidden');
-          hide.textContent = "Раскрыть"
+          hide.textContent = 'Раскрыть';
         }
       });
-    })
+    });
   }
 
   hideText();
 }
 
 function modalFunc() {
-  const modals = document.querySelectorAll(".modal")
-  const btns = document.querySelectorAll(".specialists-item__btn")
-  const closes = document.querySelectorAll(".modal__close")
+  const modals = document.querySelectorAll('.modal');
+  const btns = document.querySelectorAll('.specialists-item__btn');
+  const closes = document.querySelectorAll('.modal__close');
 
   function modal(activeIndex) {
     modals.forEach((modal, index) => {
-      modal.classList.remove("modal--active")
-
+      modal.classList.remove('modal--active');
 
       if (activeIndex === index) {
-        modal.classList.add("modal--active")
-        document.body.classList.add("locked")
+        modal.classList.add('modal--active');
+        document.body.classList.add('locked');
       }
 
-      modal.addEventListener("click", (e) => {
-        if (e.target.classList.contains("modal")) {
-          modal.classList.remove("modal--active")
-          document.body.classList.remove("locked")
+      modal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+          modal.classList.remove('modal--active');
+          document.body.classList.remove('locked');
         }
-      })
-    })
+      });
+    });
   }
 
   function btn() {
     btns.forEach((btn, index) => {
-      btn.addEventListener("click", (event) => {
-        const e = event.currentTarget
+      btn.addEventListener('click', (event) => {
+        const e = event.currentTarget;
 
         if (e) {
-          modal(index)
+          modal(index);
         }
-      })
-    })
+      });
+    });
   }
 
   btn();
 
   closes.forEach((close, index) => {
-    close.addEventListener("click", () => {
-      modals.forEach(modal => {
-        modal.classList.remove("modal--active")
-        document.body.classList.remove("locked")
-      })
-    })
-  })
-
+    close.addEventListener('click', () => {
+      modals.forEach((modal) => {
+        modal.classList.remove('modal--active');
+        document.body.classList.remove('locked');
+      });
+    });
+  });
 }
 
 modalFunc();
+
+// ---- Стрелочка наверх
+
+function arrowTop() {
+  let classScrollTop = document.querySelector('.scroll_top');
+
+  classScrollTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+
+  window.addEventListener('scroll', function () {
+    classScrollTop.hidden = pageYOffset < document.documentElement.clientHeight;
+  });
+}
+arrowTop();
