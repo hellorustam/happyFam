@@ -2307,6 +2307,7 @@ body.locked {
   left: 20px;
   right: 0;
   margin: auto;
+  transition: 0.3s;
 }
 .blog-info__title-arrow.reverse::after {
   position: absolute;
