@@ -152,6 +152,9 @@
   &__desc {
     max-width: 302px;
     line-height: math.div(21.6, 18);
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
   }
 
   &__col:not(:last-child) {
@@ -180,7 +183,7 @@
 
   &__btn__mobile {
     @media (max-width: $breakpoint768) {
-      display: none;
+      display: inline-block;
     }
   }
 
