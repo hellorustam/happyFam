@@ -156,7 +156,7 @@
     bottom: 94px;
   }
 
-  &:after {
+  &::after {
     content: '';
     width: 12px;
     height: 12px;
@@ -171,7 +171,7 @@
     margin: auto;
   }
 
-  &.active {
-    bottom: 20px;
-  }
+  // &.active {
+  //   bottom: 20px;
+  // }
 }

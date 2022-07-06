@@ -17,10 +17,10 @@ if (document.querySelector('.welcome-text__hide')) {
       text.forEach((elem) => {
         if (!elem.classList.contains('welcome-text__hide--hidden')) {
           elem.classList.add('welcome-text__hide--hidden');
-          hide.textContent = 'Скрыть';
+          hide.textContent = 'Раскрыть';
         } else {
           elem.classList.remove('welcome-text__hide--hidden');
-          hide.textContent = 'Раскрыть';
+          hide.textContent = 'Скрыть';
         }
       });
     });
@@ -90,8 +90,25 @@ function arrowTop() {
     });
   });
 
-  window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', () => {
     classScrollTop.hidden = pageYOffset < document.documentElement.clientHeight;
   });
 }
 arrowTop();
+
+// ---- Показать-скрыть лекции в Курсах
+
+function showCourseText() {
+  let titleHide = document.querySelectorAll('.blog-info__cursor');
+
+  titleHide.forEach((i) => {
+    let closestPar = i.closest('.blog-info');
+    let closestSib = closestPar.querySelector('.blog-info__hide');
+
+    i.addEventListener('click', () => {
+      closestSib.classList.toggle('blog-info__hide');
+    });
+  });
+}
+
+showCourseText();

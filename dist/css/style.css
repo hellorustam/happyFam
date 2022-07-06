@@ -885,8 +885,9 @@ body.locked {
 }
 .welcome__hide {
   font-weight: 700;
-  color: #FC9700;
+  color: #fc9700;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 @media (max-width: 575.98px) {
   .welcome__hide {
@@ -911,7 +912,7 @@ body.locked {
     display: none;
   }
 }
-@media (min-width: 576px 575.98px) {
+@media (min-width: 576px) {
   .welcome-text__hide--hidden {
     display: block;
   }
@@ -1377,7 +1378,7 @@ body.locked {
   line-height: 1.2;
 }
 .course__col:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 .course__price {
   font-family: "Comfortaa", cursive;
@@ -2217,7 +2218,6 @@ body.locked {
 @media (min-width: 768px) {
   .products .courses__row {
     grid-template-columns: 325px 1fr;
-    grid-auto-rows: minmax(480px, auto);
   }
 }
 .products .stock {
@@ -2238,23 +2238,26 @@ body.locked {
   padding: 24px;
 }
 .blog-info__title {
+  display: flex;
+  flex-direction: row;
   max-width: 654px;
   font-family: "Comfortaa", cursive;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 1.125;
-  color: #fc9700;
+  color: #FC9700;
 }
 .blog-info__title:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .blog-info__list {
   list-style-type: none;
 }
 .blog-info__list + .blog-info__list {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 .blog-info__list:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .blog-info__item {
   font-size: 16px;
@@ -2270,6 +2273,46 @@ body.locked {
   font-size: 16px;
   line-height: 1.2;
   color: #000000;
+}
+.blog-info__about {
+  max-width: 695px;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000000;
+}
+.blog-info__about-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+.blog-info__title-arrow {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.blog-info__title-arrow::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #FC9700;
+  border-left: 2px solid #FC9700;
+  transform: rotate(225deg);
+  position: absolute;
+  top: -8px;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  margin: auto;
+}
+.blog-info__cursor {
+  cursor: pointer;
+}
+.blog-info__hide {
+  display: none;
 }
 
 /*
@@ -2418,7 +2461,7 @@ body.locked {
     bottom: 94px;
   }
 }
-.scroll_top:after {
+.scroll_top::after {
   content: "";
   width: 12px;
   height: 12px;
@@ -2431,7 +2474,4 @@ body.locked {
   left: 0;
   right: 0;
   margin: auto;
-}
-.scroll_top.active {
-  bottom: 20px;
 }

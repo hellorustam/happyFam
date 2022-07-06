@@ -23,13 +23,13 @@
 
     margin: 0 auto 80px;
 
-    @media(max-width: $breakpoint768) {
+    @media (max-width: $breakpoint768) {
       margin-bottom: 40px;
       max-width: 688px;
       height: 388px;
     }
 
-    @media(max-width: 380px) {
+    @media (max-width: 380px) {
       max-width: 280px;
       height: 157px;
     }
@@ -42,7 +42,7 @@
       margin-bottom: 43px;
     }
 
-    @media(max-width: $breakpoint768) {
+    @media (max-width: $breakpoint768) {
       font-size: 24px;
 
       &:not(:last-child) {
@@ -50,7 +50,7 @@
       }
     }
 
-    @media(max-width: $breakpoint576) {
+    @media (max-width: $breakpoint576) {
       color: #000;
     }
   }
@@ -58,7 +58,7 @@
   &__text {
     line-height: math.div(21.6, 18);
 
-    p+p {
+    p + p {
       margin-top: 20px;
     }
 
@@ -66,27 +66,28 @@
       margin-bottom: 45px;
     }
 
-    @media(max-width: $breakpoint768) {
+    @media (max-width: $breakpoint768) {
       &:not(:last-child) {
         margin-bottom: 24px;
       }
     }
 
-    @media(max-width: $breakpoint576) {
+    @media (max-width: $breakpoint576) {
       color: #000;
     }
   }
 
   &__hide {
     font-weight: 700;
-    color: #FC9700;
+    color: #fc9700;
     margin-bottom: 24px;
+    cursor: pointer;
 
-    @media(max-width: $breakpoint576) {
+    @media (max-width: $breakpoint576) {
       display: block;
     }
 
-    @media(min-width: $min-breakpoint576) {
+    @media (min-width: $min-breakpoint576) {
       display: none;
     }
   }
@@ -102,13 +103,12 @@
 }
 
 .welcome-text__hide {
-
   &--hidden {
-    @media(max-width: $breakpoint576) {
+    @media (max-width: $breakpoint576) {
       display: none;
     }
 
-    @media(min-width: $min-breakpoint576$breakpoint576) {
+    @media (min-width: $min-breakpoint576) {
       display: block;
     }
   }
