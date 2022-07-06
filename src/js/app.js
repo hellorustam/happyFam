@@ -104,9 +104,11 @@ function showCourseText() {
   titleHide.forEach((i) => {
     let closestPar = i.closest('.blog-info');
     let closestSib = closestPar.querySelector('.blog-info__hide');
+    const arrowCur = i.querySelector('.blog-info__title-arrow');
 
     i.addEventListener('click', () => {
       closestSib.classList.toggle('blog-info__hide');
+      arrowCur.classList.toggle('reverse');
     });
   });
 }

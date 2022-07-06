@@ -2308,6 +2308,11 @@ body.locked {
   right: 0;
   margin: auto;
 }
+.blog-info__title-arrow.reverse::after {
+  position: absolute;
+  top: 6px;
+  transform: rotate(45deg);
+}
 .blog-info__cursor {
   cursor: pointer;
 }

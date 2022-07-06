@@ -173,6 +173,14 @@
     }
   }
 
+  &__title-arrow.reverse {
+    &::after {
+      position: absolute;
+      top: 6px;
+      transform: rotate(45deg);
+    }
+  }
+
   &__cursor {
     cursor: pointer;
   }
