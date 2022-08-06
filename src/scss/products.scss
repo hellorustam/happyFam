@@ -68,6 +68,17 @@
         // grid-auto-rows: minmax(440px, auto);
       }
     }
+
+    &__row-feedback {
+      // display: grid;
+      // gap: 20px;
+      margin-top: 40px;
+
+      @media (min-width: $min-breakpoint768) {
+        // grid-template-columns: 325px 1fr;
+        // grid-auto-rows: minmax(440px, auto);
+      }
+    }
   }
 
   .stock {
