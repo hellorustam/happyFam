@@ -53,17 +53,22 @@ const feedback = new Swiper('.feedback__slider', {
   loop: true,
   // width: 580,
   pagination: {
-    el: '.block__pagination',
+    el: '.feedbacks__pagination',
     clickable: true,
   },
 
-  breakpoints: {
-    1280: {
-      // width: 640,
-      navigation: {
-        nextEl: '.feedbacks__btn--next',
-        prevEl: '.feedbacks__btn--prev',
-      },
-    },
+  navigation: {
+    nextEl: '.feedbacks__btn--next',
+    prevEl: '.feedbacks__btn--prev',
   },
+
+  // breakpoints: {
+  //   1280: {
+  //     // width: 640,
+  //     navigation: {
+  //       nextEl: '.feedbacks__btn--next',
+  //       prevEl: '.feedbacks__btn--prev',
+  //     },
+  //   },
+  // },
 });
