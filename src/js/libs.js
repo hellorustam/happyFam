@@ -9,7 +9,7 @@ if (window.innerWidth <= 576) {
 
     pagination: {
       el: '.benefits__pagination',
-      clickable: true
+      clickable: true,
     },
   });
 
@@ -20,7 +20,7 @@ if (window.innerWidth <= 576) {
     spaceBetween: 40,
     pagination: {
       el: '.courses__pagination',
-      clickable: true
+      clickable: true,
     },
   });
 }
@@ -32,7 +32,7 @@ const block = new Swiper('.block__slider', {
 
   pagination: {
     el: '.block__pagination',
-    clickable: true
+    clickable: true,
   },
 
   breakpoints: {
@@ -42,6 +42,28 @@ const block = new Swiper('.block__slider', {
         nextEl: '.block__btn--next',
         prevEl: '.block__btn--prev',
       },
-    }
-  }
+    },
+  },
+});
+
+const feedback = new Swiper('.feedback__slider', {
+  modules: [Pagination, Navigation, EffectCreative],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  // width: 580,
+  pagination: {
+    el: '.block__pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    1280: {
+      // width: 640,
+      navigation: {
+        nextEl: '.feedbacks__btn--next',
+        prevEl: '.feedbacks__btn--prev',
+      },
+    },
+  },
 });

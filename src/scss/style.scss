@@ -1,26 +1,26 @@
 @use 'sass:math';
 
-@import "vars";
+@import 'vars';
 
 /*
 -------Reset----------
 */
 
-@import "reset";
+@import 'reset';
 
 /*
 ----------Swipper-------------
 */
 
-@import "../../node_modules/swiper/swiper";
-@import "../../node_modules/swiper/modules/navigation/navigation";
-@import "../../node_modules/swiper/modules/effect-creative/effect-creative";
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/navigation/navigation';
+@import '../../node_modules/swiper/modules/effect-creative/effect-creative';
 
 /*
 ----------Base-------------
 */
 
-@import "base";
+@import 'base';
 
 /*
 ----------Animation-------------
@@ -36,22 +36,21 @@
   }
 }
 
-
 /*
 ----------Global-------------
 */
 
-@import "global";
+@import 'global';
 
 /*
 ---------Header-----------
 */
 
-@import "header";
+@import 'header';
 
 // Burger
 
-@import "modules/burger";
+@import 'modules/burger';
 
 /*
 ---------Main-----------
@@ -69,54 +68,54 @@
 ---------Intro-----------
 */
 
-@import "components/intro";
+@import 'components/intro';
 
 /*
 ---------Benefits-----------
 */
 
-@import "components/benefits";
+@import 'components/benefits';
 
 /*
 ---------Benefits-----------
 */
 
-@import "components/welcome";
+@import 'components/welcome';
 
 /*
 ---------lectures-----------
 */
 
-@import "components/lectures";
+@import 'components/lectures';
 
 /*
 ---------Specialist-----------
 */
 
-@import "components/specialist";
+@import 'components/specialist';
 /*
 ---------Stock-----------
 */
 
-@import "components/stock";
+@import 'components/stock';
 
 /*
 ---------Courses-----------
 */
 
-@import "components/courses";
+@import 'components/courses';
 
 /*
 ---------Contact-----------
 */
 
-@import "components/contact";
+@import 'components/contact';
 
 /*
 ---------Modal-----------
 */
 
-@import "components/modal";
+@import 'components/modal';
 
 /*
 ---------Pages-----------
@@ -128,18 +127,18 @@
 
 .home {
   .intro {
-    @media(max-width: $breakpoint1400) {
+    @media (max-width: $breakpoint1400) {
       position: relative;
     }
 
-    @media(min-width: $min-breakpoint1400) {
+    @media (min-width: $min-breakpoint1400) {
       height: 480px;
     }
 
     &__container {
       display: flex;
 
-      @media(min-width: $min-breakpoint1400) {
+      @media (min-width: $min-breakpoint1400) {
         position: relative;
       }
 
@@ -152,17 +151,17 @@
         top: 213px;
         z-index: 2;
 
-        @media(max-width: $breakpoint1400) {
+        @media (max-width: $breakpoint1400) {
           display: none;
         }
       }
 
-      @media(max-width: $breakpoint576) {
+      @media (max-width: $breakpoint576) {
         padding: 0;
         flex-direction: column;
       }
 
-      @media(min-width: $min-breakpoint1400) {
+      @media (min-width: $min-breakpoint1400) {
         padding-top: 72px;
       }
     }
@@ -171,11 +170,11 @@
   .benefits {
     margin: 193px 0 118px;
 
-    @media(max-width: $breakpoint1400) {
+    @media (max-width: $breakpoint1400) {
       margin-top: 410px;
     }
 
-    @media(max-width: $breakpoint576) {
+    @media (max-width: $breakpoint576) {
       padding-top: 45px;
       margin-top: 0;
     }
@@ -198,11 +197,11 @@
   }
 
   .course__desc {
-    @media(max-width: $breakpoint576) {
+    @media (max-width: $breakpoint576) {
       width: 302px;
     }
 
-    @media(max-width: 390px) {
+    @media (max-width: 390px) {
       width: 232px;
     }
   }
@@ -210,18 +209,22 @@
 
 // About
 
-@import "about";
+@import 'about';
 
 // Out
 
-@import "our";
+@import 'our';
 
 // products
 
-@import "products";
+@import 'products';
+
+// feedbacks
+
+@import 'feedback';
 
 /*
 ---------Footer-----------
 */
 
-@import "footer";
+@import 'footer';
